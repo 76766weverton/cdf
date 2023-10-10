@@ -1,0 +1,43 @@
+/* Estilos globais */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos dos contêineres */
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #000;
+    margin: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Estilos do Container 3 (resposta do usuário) */
+.container:nth-child(3) {
+    width: 200px; /* Largura fixa */
+    height: 50px; /* Altura fixa */
+    border: 2px solid #000;
+    margin: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Estilos dos botões */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para a resposta do usuário */
+#respostaUsuario {
+    font-weight: bold;
+}
