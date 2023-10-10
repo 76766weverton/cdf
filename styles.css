@@ -22,8 +22,8 @@ body {
 
 /* Estilos do Container 3 (resposta do usuário) */
 .container:nth-child(3) {
-    width: 200px; /* Largura fixa */
-    height: 50px; /* Altura fixa */
+    width: 400px; /* Largura fixa */
+    height: 150px; /* Altura fixa */
     border: 2px solid #000;
     margin: 10px;
     background-color: #fff;
