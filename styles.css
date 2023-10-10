@@ -44,9 +44,10 @@ body {
 
 /* Estilos dos botões */
 button {
+ 
     margin: auto;
     width: 150px; /* Defina o tamanho fixo que desejar */
-    padding: 10px 20px;
+    padding: 30px 20px;
     font-size: 16px;
     background-image: linear-gradient(to bottom, #0bdddd, #273b64); /* Gradiente linear de azul */
     background-color: #130303; /* Cor de fallback para navegadores mais antigos */
@@ -60,4 +61,5 @@ button {
 /* Estilo para a resposta do usuário */
 #respostaUsuario {
     font-weight: bold;
+   
 }
