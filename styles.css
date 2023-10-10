@@ -44,9 +44,17 @@ body {
 
 /* Estilos dos botões */
 button {
+    margin: auto;
+    width: 150px; /* Defina o tamanho fixo que desejar */
     padding: 10px 20px;
-    margin: 5px;
     font-size: 16px;
+    background-image: linear-gradient(to bottom, #0bdddd, #273b64); /* Gradiente linear de azul */
+    background-color: #130303; /* Cor de fallback para navegadores mais antigos */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s; /* Adiciona uma transição suave para a propriedade de opacidade */
 }
 
 /* Estilo para a resposta do usuário */
