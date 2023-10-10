@@ -36,17 +36,19 @@ body {
     border: 2px solid #000;
     margin: 10px;
     background-color: #fff;
-    text-align: center;
+   
+    font-size: 20px;
 }
+
 
 
 
 
 /* Estilos dos botões */
 button {
- 
-    margin: auto;
-    width: 150px; /* Defina o tamanho fixo que desejar */
+    display: inline-block; /* Adicione esta linha para alinhar os botões horizontalmente */
+    margin: 10px;
+    width: 100px; /* Defina o tamanho fixo que desejar */
     padding: 30px 20px;
     font-size: 16px;
     background-image: linear-gradient(to bottom, #0bdddd, #273b64); /* Gradiente linear de azul */
@@ -57,6 +59,7 @@ button {
     cursor: pointer;
     transition: opacity 0.3s; /* Adiciona uma transição suave para a propriedade de opacidade */
 }
+
 
 /* Estilo para a resposta do usuário */
 #respostaUsuario {

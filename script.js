@@ -12,33 +12,54 @@ const perguntas = [
     // Adicione mais perguntas aqui
 ];
 
-
 const perguntaElement = document.getElementById('pergunta');
 const respostaUsuarioElement = document.getElementById('respostaUsuario');
 const botaoCerto = document.getElementById('botaoCerto');
 const botaoErrado = document.getElementById('botaoErrado');
+const botaoProximo = document.getElementById('botaoProximo');
 
-function mostrarPergunta() {
-    const perguntaAleatoria = escolherPerguntaAleatoria();
-    perguntaElement.textContent = perguntaAleatoria.pergunta;
-    respostaUsuarioElement.textContent = '';
+let perguntaAtual = 0;
+let acertos = 0;
+let erros = 0;
+let respondido = false; // Variável para controlar se a pergunta foi respondida
+
+// Função para embaralhar as perguntas
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 
-function escolherPerguntaAleatoria() {
-    return perguntas[Math.floor(Math.random() * perguntas.length)];
+// Embaralhar as perguntas
+shuffleArray(perguntas);
+
+function mostrarPergunta() {
+    if (perguntaAtual < 10) {
+        perguntaElement.textContent = perguntas[perguntaAtual].pergunta;
+        respostaUsuarioElement.textContent = '';
+        respondido = false; // Permite que a próxima pergunta seja respondida
+    } else {
+        perguntaElement.textContent = 'Quiz concluído!';
+        respostaUsuarioElement.textContent = `Acertos: ${acertos}, Erros: ${erros}`;
+        botaoProximo.style.display = 'none'; // Oculta o botão "Próximo" no final do quiz
+    }
 }
 
 function mostrarResposta(resposta) {
-    const perguntaAtual = perguntaElement.textContent;
-    const perguntaCorreta = perguntas.find(pergunta => pergunta.pergunta === perguntaAtual);
+    if (!respondido) {
+        const perguntaCorreta = perguntas[perguntaAtual];
 
-    if (resposta === perguntaCorreta.resposta) {
-        respostaUsuarioElement.textContent = 'Certo!';
-    } else {
-        respostaUsuarioElement.textContent = 'Errado. Motivo: ' + perguntaCorreta.motivoErrado;
+        if (resposta === perguntaCorreta.resposta) {
+            respostaUsuarioElement.textContent = 'Certo!';
+            acertos++;
+        } else {
+            respostaUsuarioElement.textContent = 'Errado. Motivo: ' + perguntaCorreta.motivoErrado;
+            erros++;
+        }
+
+        respondido = true; // A pergunta foi respondida
     }
-
-    setTimeout(mostrarPergunta, 2000); // Mostrar uma nova pergunta após 2 segundos
 }
 
 botaoCerto.addEventListener('click', function () {
@@ -47,6 +68,17 @@ botaoCerto.addEventListener('click', function () {
 
 botaoErrado.addEventListener('click', function () {
     mostrarResposta('Errado');
+});
+
+botaoProximo.addEventListener('click', function () {
+    if (perguntaAtual < 10) {
+        perguntaAtual++; // Avança para a próxima pergunta quando o botão "Próximo" é clicado
+        mostrarPergunta();
+    } else {
+        perguntaElement.textContent = 'Quiz concluído!';
+        respostaUsuarioElement.textContent = `Acertos: ${acertos}, Erros: ${erros}`;
+        botaoProximo.style.display = 'none'; // Oculta o botão "Próximo" no final do quiz
+    }
 });
 
 mostrarPergunta();
