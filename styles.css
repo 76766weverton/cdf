@@ -21,12 +21,24 @@ body {
 }
 
 /* Estilos do Container 3 (resposta do usuário) */
+.container:nth-child(4) {
+    display: inline-block;
+    margin: none;
+
+    border: 2px solid #000;
+    margin: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
 
 
 
 
 /* Estilos dos botões */
 button {
+    margin-top: px;
     display: inline-block;
     width: 100px;
     padding: 10px 1px;
