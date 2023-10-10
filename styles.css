@@ -21,44 +21,26 @@ body {
 }
 
 /* Estilos do Container 3 (resposta do usuário) */
-.container:nth-child(3) {
-    width: 400px; /* Largura fixa */
-    height: 150px; /* Altura fixa */
-    border: 2px solid #000;
-    margin: 10px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.container:nth-child(2) {
-    width: 400px; /* Largura fixa */
-    height: 150px; /* Altura fixa */
-    border: 2px solid #000;
-    margin: 10px;
-    background-color: #fff;
-   
-    font-size: 20px;
-}
-
 
 
 
 
 /* Estilos dos botões */
 button {
-    display: inline-block; /* Adicione esta linha para alinhar os botões horizontalmente */
-    margin: 10px;
-    width: 100px; /* Defina o tamanho fixo que desejar */
-    padding: 30px 20px;
+    display: inline-block;
+    width: 100px;
+    padding: 10px 1px;
     font-size: 16px;
-    background-image: linear-gradient(to bottom, #0bdddd, #273b64); /* Gradiente linear de azul */
-    background-color: #130303; /* Cor de fallback para navegadores mais antigos */
+    background-image: linear-gradient(to bottom, #0bdddd, #273b64);
+    background-color: #130303;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: opacity 0.3s; /* Adiciona uma transição suave para a propriedade de opacidade */
-}
+    transition: opacity 0.3s;
+    margin: 0 10px; /* Adicione essa linha para criar espaço igual à esquerda e à direita de cada botão */
+}/* Adicione essa linha para criar espaço entre os botões */
+
 
 
 /* Estilo para a resposta do usuário */
