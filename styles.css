@@ -35,7 +35,7 @@ body {
 .container3 {
     display: flex;
     flex-direction: column;
-  
+    align-items: center;
     width: 90%; /* Usando porcentagem para a largura do contêiner */
     max-width: 800px; /* Define uma largura máxima para evitar que o contêiner fique muito largo */
     padding: 20px;
