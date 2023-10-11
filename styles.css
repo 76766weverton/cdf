@@ -1,23 +1,26 @@
 /* Estilos globais */
 body {
+    background-image: ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #0b1725;
 }
 
 /* Estilos dos contêineres */
 .container {
+    
     width: 80%;
     max-width: 400px;
     padding: 20px;
-    border: 2px solid #000;
+    border: 2px solid #2b27272c;
     margin: 10px;
-    background-color: #fff;
+  
     text-align: center;
+    background-color: rgba(52, 85, 155, 0.137); 
 }
 
 /* Estilos do Container 3 (resposta do usuário) */
