@@ -1,6 +1,7 @@
 /* Estilos globais */
 body {
-    background-image: ;
+ 
+  color: #f6fdfd;
     display: flex;
     flex-direction: column;
     justify-content: center;
